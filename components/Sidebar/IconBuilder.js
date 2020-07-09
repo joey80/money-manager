@@ -9,9 +9,8 @@ import {
   UserOutlined,
 } from '@ant-design/icons';
 
-// switch to dynamic imports
-export const IconBuilder = (elm) => {
-  switch (elm) {
+export const IconBuilder = ({ name }) => {
+  switch (name) {
     case 'CalendarOutlined': {
       return <CalendarOutlined />;
     }
