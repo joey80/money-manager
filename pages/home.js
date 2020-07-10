@@ -1,4 +1,4 @@
-import { Layout, Menu, Breadcrumb } from 'antd';
+import { Layout, Breadcrumb } from 'antd';
 import Sidebar from '../components/Sidebar/Sidebar';
 
 export const Home = () => {
