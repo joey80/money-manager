@@ -13,14 +13,14 @@ export const Sidebar = () => {
   const RenderSubMenu = ({ children, icon, title, ...other }) => (
     <SubMenu icon={<IconBuilder name={icon} />} title={title} {...other}>
       {children.map((elm, index) => (
-        <RenderMenu key={index} icon={elm.icon} title={elm.title} />
+        <RenderMenu key={index} icon={elm.icon} title={elm.title} href={elm.href} />
       ))}
     </SubMenu>
   );
 
-  const RenderMenu = ({ icon, title, ...other }) => (
+  const RenderMenu = ({ href, icon, title, ...other }) => (
     <Menu.Item icon={<IconBuilder name={icon} />} {...other}>
-      {title}
+      <a href={href}>{title}</a>
     </Menu.Item>
   );
 
@@ -28,11 +28,11 @@ export const Sidebar = () => {
     <Sider collapsible collapsed={collapsed} onCollapse={() => setCollapsed(!collapsed)}>
       <Logo />
       <Menu theme='dark' mode='inline'>
-        {menu.map(({ children, icon, title }, index) =>
+        {menu.map(({ children, href, icon, title }, index) =>
           children ? (
             <RenderSubMenu key={index} children={children} icon={icon} title={title} />
           ) : (
-            <RenderMenu key={index} icon={icon} title={title} />
+            <RenderMenu key={index} href={href} icon={icon} title={title} />
           )
         )}
       </Menu>
