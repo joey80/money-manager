@@ -7,10 +7,12 @@ export const Data = {
         {
           icon: 'FileDoneOutlined',
           title: 'View Bills',
+          href: 'bills',
         },
         {
           icon: 'PlusCircleOutlined',
           title: 'Add A Payment',
+          href: 'payment',
         },
       ],
     },
@@ -21,16 +23,19 @@ export const Data = {
         {
           icon: 'ProfileOutlined',
           title: 'This Month',
+          href: 'spending/month',
         },
         {
           icon: 'ProjectOutlined',
           title: 'All Time',
+          href: 'spending/all',
         },
       ],
     },
     {
       icon: 'StockOutlined',
       title: 'Investments',
+      href: 'investments',
     },
     {
       icon: 'UserOutlined',
@@ -38,6 +43,7 @@ export const Data = {
       children: [
         {
           title: 'Profile',
+          href: 'profile',
         },
         {
           title: 'Logout',
