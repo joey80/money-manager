@@ -1,10 +1,16 @@
+import { useEffect, useState } from 'react';
 import { Layout, Breadcrumb } from 'antd';
 import Sidebar from '../Sidebar/Sidebar';
 
 export const Wrapper = ({ children }) => {
   const { Header, Content, Footer } = Layout;
+  const [loaded, setLoaded] = useState(false);
 
-  return (
+  useEffect(() => {
+    setLoaded(true);
+  });
+
+  return loaded ? (
     <Layout style={{ minHeight: '100vh' }}>
       <Sidebar />
       <Layout className='site-layout'>
@@ -21,7 +27,7 @@ export const Wrapper = ({ children }) => {
         <Footer style={{ textAlign: 'center' }}>©2020 JoeyUI.com</Footer>
       </Layout>
     </Layout>
-  );
+  ) : null;
 };
 
 export default Wrapper;
