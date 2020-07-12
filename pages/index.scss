@@ -3,9 +3,12 @@
   font-family: 'Love Ya Like A Sister', cursive;
   font-size: 2rem;
   height: 32px;
-  // background: rgba(70, 31, 243, 0.1);
   margin: 16px;
   padding-left: 14px;
+
+  & a {
+    color: #fff;
+  }
 }
 
 .site-layout .site-layout-background {

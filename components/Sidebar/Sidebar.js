@@ -1,4 +1,5 @@
 import { useState } from 'react';
+import Link from 'next/link';
 import { Layout, Menu } from 'antd';
 import IconBuilder from './IconBuilder';
 import Logo from '../Logo/Logo';
@@ -20,7 +21,7 @@ export const Sidebar = () => {
 
   const RenderMenu = ({ href, icon, title, ...other }) => (
     <Menu.Item icon={<IconBuilder name={icon} />} {...other}>
-      <a href={href}>{title}</a>
+      <Link href={href}>{title}</Link>
     </Menu.Item>
   );
 
