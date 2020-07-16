@@ -5,10 +5,13 @@
   "scripts": {
     "dev": "next dev",
     "build": "next build",
-    "start": "next start"
+    "start": "next start",
+    "e2e": "next dev cy:open",
+    "cy:open": "cypress open"
   },
   "dependencies": {
     "antd": "^4.4.1",
+    "cypress": "^4.10.0",
     "dotenv": "^8.2.0",
     "mongoose": "^5.9.21",
     "next": "9.4.4",
